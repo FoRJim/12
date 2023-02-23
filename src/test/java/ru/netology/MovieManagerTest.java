@@ -23,7 +23,7 @@ public class MovieManagerTest {
 
     @Test
     public void lastMovie() {
-        MovieManager manager = new MovieManager();
+        MovieManager manager = new MovieManager(2);
 
         String film1 = "film1";
         String film2 = "film2";
@@ -55,7 +55,6 @@ public class MovieManagerTest {
         String film11 = "film11";
 
 
-        //manager.NewFilms(film1);
         manager.NewFilms(film2);
         manager.NewFilms(film3);
         manager.NewFilms(film4);

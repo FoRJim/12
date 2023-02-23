@@ -22,6 +22,27 @@ public class MovieManagerTest {
     }
 
     @Test
+    public void addMovie2() {
+
+        MovieManager manager = new MovieManager();
+        String film1 = "film1";
+        String film2 = "film2";
+        String film3 = "film3";
+        String film4 = "film4";
+        String film5 = "film5";
+
+        manager.NewFilms(film1);
+        manager.NewFilms(film2);
+        manager.NewFilms(film3);
+        manager.NewFilms(film4);
+        manager.NewFilms(film5);
+
+        String[] expected = {film1, film2, film3, film4, film5};
+        String[] actual = manager.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
     public void lastMovie() {
         MovieManager manager = new MovieManager(2);
 

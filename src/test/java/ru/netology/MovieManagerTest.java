@@ -92,5 +92,33 @@ public class MovieManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+    public void lastMovie3() {
+
+        MovieManager manager = new MovieManager();
+        String film1 = "film1";
+        String film2 = "film2";
+        String film3 = "film3";
+        String film4 = "film4";
+        String film5 = "film5";
+        String film6 = "film6";
+        String film7 = "film7";
+        String film8 = "film8";
+        String film9 = "film9";
+        String film10 = "film10";
+        String film11 = "film11";
+
+        manager.NewFilms(film6);
+        manager.NewFilms(film7);
+        manager.NewFilms(film8);
+        manager.NewFilms(film9);
+        manager.NewFilms(film10);
+
+
+        String[] expected = {film10, film9, film8, film7, film6};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
 

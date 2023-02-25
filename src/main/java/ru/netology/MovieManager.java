@@ -12,7 +12,7 @@ public class MovieManager {
         this.maxMovie = maxMovie;
     }
 
-    public void NewFilms(String args) {
+    public void newFilms(String args) {
         String[] addMovie = new String[films.length + 1];
         for (int i = 0; i < films.length; i++) {
             addMovie[i] = films[i];
